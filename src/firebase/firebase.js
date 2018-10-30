@@ -1,4 +1,6 @@
 import * as firebase from 'firebase';
+import * as functions from 'firebase-functions';
+
 
 const config = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -9,7 +11,7 @@ const config = {
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
 };
 
-console.log(config.databaseURL);
+console.log(config);
 
 firebase.initializeApp(config);
 

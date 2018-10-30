@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-// extract text webpack plugin
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // Environment variable that stores the environment that you're currently in.
@@ -18,7 +17,6 @@ if (process.env.NODE_ENV === 'test') {
 module.exports = (env) => {
 	const isProduction = env === 'production';
 	const CSSExtract = new ExtractTextPlugin('styles.css');
-
 	return {
 		entry: ['babel-polyfill','./src/app.js'],
 		output: {
