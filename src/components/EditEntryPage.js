@@ -14,6 +14,14 @@ export class EditEntryPage extends React.Component {
         this.props.startRemoveEntry({id: this.props.entry.id});
         this.props.history.push('/');
     }
+    onBeforeUnload =  () => {
+        return window.unbeforeunload = () => {
+            window.scrollTo(0, 0);
+        }
+    }
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
     render() {
         return (
           <div>

@@ -12,7 +12,6 @@
 
 .textarea {
     @extend .text-input;
-    height: 14rem;
+    height: 9rem;
     resize: none;
-    // add a media query here for mobile device to prevent overflow, reduce height to ~11rem
 }

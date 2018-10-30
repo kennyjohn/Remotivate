@@ -105,7 +105,10 @@ export default class EntryForm extends React.Component {
                     className="text-input"
                     />
                     <textarea
-                    placeholder={`Why is this ${this.props.buttonClicked} important to you?`}
+                    placeholder={`Why is this ${this.state.text ? 'text' : 
+                    this.state.image ? 'image' :
+                    this.state.video ? 'video' :
+                    ''} important to you?`}
                     onChange={this.onPurposeChange}
                     value={this.state.purpose}
                     className="textarea"
