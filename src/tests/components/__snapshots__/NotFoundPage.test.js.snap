@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render NotFoundPage 1`] = `
+<div
+  style={
+    Object {
+      "margin": "10px",
+    }
+  }
+>
+  404 – Go back to 
+  <Link
+    replace={false}
+    to="/"
+  >
+    Remotivate dashboard
+  </Link>
+</div>
+`;

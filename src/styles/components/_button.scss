@@ -1,0 +1,25 @@
+.button {
+    background: $linkedin-blue;
+    padding: $s-size;
+    color: white;
+    font-weight: 300;
+    font-size: $font-size-large;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
+    border: none;
+    margin: $m-size $s-size;
+}
+.button--remove, .button--save {
+    margin: 0;
+    
+}
+.button--save {
+    margin-top: 10px;
+}
+.button--logout {
+    background: none;
+}
+.button__extend {
+    margin-bottom: 26px;
+}
