@@ -25,12 +25,17 @@
 }
 
 .list-item--message {
-    align-items: center;
-    justify-content: center;
-    color: $grey;
+    display: grid;
+    grid-column-start: 2;
     padding: $m-size;
-    &:hover {
-        background: none;
+    color: black;
+    @media (max-width: $l-devices) {
+        grid-column-start: 1;
+        margin: 0 auto;
+    }
+    &:hover, span {
+        background: none !important;
+        border: 1px solid white;
     }
 }
 
@@ -83,7 +88,6 @@
         max-height: 300px;
         object-fit: cover;
     }
-    // max-width: 492px;
     @media (max-width: $l-devices) {
        margin: 0 auto;
     }
@@ -98,6 +102,7 @@
         line-height: 1.6;
     }
     max-width: 492px;
+    color: black;
     @media (max-width: $l-devices) {
         margin: 0 auto;
     }

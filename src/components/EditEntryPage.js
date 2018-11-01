@@ -1,7 +1,9 @@
 // use 'EntryForm' component
 import React from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import EntryForm from './EntryForm';
+import EntryListItem from './EntryListItem';
 import { startEditEntry, startRemoveEntry } from '../actions/entries';
 
 export class EditEntryPage extends React.Component {
@@ -23,14 +25,27 @@ export class EditEntryPage extends React.Component {
         window.scrollTo(0, 0)
     }
     render() {
+        let text = this.props.entry.text;
+        let video = this.props.entry.video;
+        let image = this.props.entry.image;
+        let createdAt = this.props.entry.createdAt;
         return (
           <div>
             <div className="page-header">
               <div className="content-container">
-              <h1 className="page-header__title">Edit Entry</h1>
+                <h1 className="page-header__title">Edit Entry</h1>
               </div>
             </div>
-    
+
+           <div className={text ? "edit-entry--preview" : video || image ? "edit-entry--preview media-entry" : ""}>
+                {   image ? <img src={image.replace("http:", "https:")}></img> :
+                    text ? <p>{text}</p> :
+                    video ? <iframe width="325" height="275" src={video.replace("watch?v=", "embed/")} frameBorder="0" allow="encrypted-media" allowFullScreen></iframe> :
+                    null
+                }
+                <p className="list-item__subtitle">{moment(createdAt).format('MMMM Do, YYYY')}</p>
+           </div>
+
             <div className="content-container">
                 <EntryForm
                   entry={this.props.entry}

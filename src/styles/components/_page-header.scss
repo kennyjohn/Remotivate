@@ -3,9 +3,6 @@
     padding: $l-size 0;
     border-bottom: 1px solid #d9d9d9;
     margin-bottom: $l-size;
-    @media (max-width: $m-devices) {
-        padding-top: $s-size;
-    }
 }
 
 .page-header__img {

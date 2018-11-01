@@ -6,7 +6,7 @@ import moment from 'moment';
 
 const EntryListItem = ({ id, text, author, video, image, purpose, createdAt }) => (
     <Link className={text ? "list-item onHoverText" : video || image ? "list-item onHoverMedia" : ""} to={`/edit/${id}`}>
-    { image ? <img src={image}></img> :
+    { image ? <img src={image.replace("http:", "https:")}></img> :
         text ? <p>{text}</p> :
         video ? <iframe width="325" height="275" src={video.replace("watch?v=", "embed/")} frameBorder="0" allow="encrypted-media" allowFullScreen></iframe> :
         null
