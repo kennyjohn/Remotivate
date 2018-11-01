@@ -91,7 +91,7 @@ export default class EntryForm extends React.Component {
                     <input
                     disabled={!!this.state.video || this.props.buttonClicked === 'video' ? false : true}
                     type="text"
-                    placeholder="Video URL"
+                    placeholder="Youtube Video URL"
                     onChange={this.onVideoURLChange}
                     value={this.state.video}
                     className="text-input"
@@ -105,9 +105,9 @@ export default class EntryForm extends React.Component {
                     className="text-input"
                     />
                     <textarea
-                    placeholder={`Why is this ${this.state.text ? 'text' : 
-                    this.state.image ? 'image' :
-                    this.state.video ? 'video' :
+                    placeholder={`Why is this ${this.state.text || this.props.buttonClicked === 'text' ? 'text' : 
+                    this.state.image || this.props.buttonClicked === 'image' ? 'image' :
+                    this.state.video || this.props.buttonClicked === 'video' ? 'video' :
                     ''} important to you?`}
                     onChange={this.onPurposeChange}
                     value={this.state.purpose}

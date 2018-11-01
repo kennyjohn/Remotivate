@@ -10,16 +10,35 @@
     border: none;
     margin: $m-size $s-size;
 }
+
 .button--remove, .button--save {
     margin: 0;
-    
 }
+
 .button--save {
     margin-top: 10px;
 }
+
 .button--logout {
     background: none;
 }
+
 .button__extend {
     margin-bottom: 26px;
+}
+
+.button__filters {
+    @extend .button;
+    background: white;
+    color: black;
+    border: 1px solid lightgray;
+    margin: $m-size 2px;
+    height: 50px;
+}
+
+.button__filters--selected {
+    @extend .button;
+    margin: $m-size 2px;
+    border: 1px solid white;
+    height: 50px;
 }

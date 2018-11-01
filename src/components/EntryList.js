@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import EntryListItem from './EntryListItem';
+import selectEntries from '../selectors/entries';
 
 const EntryList = (props) => (
     <div className="content-container content-container--stretch list-grid">
@@ -20,7 +21,7 @@ const EntryList = (props) => (
 
   const mapStateToProps = (state) => {
     return {
-      entries: state.entries
+      entries: selectEntries(state.entries, state.filters)
     };
   };
   

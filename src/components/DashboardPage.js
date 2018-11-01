@@ -1,12 +1,12 @@
 import React from 'react';
-import SelectEntryType from './SelectEntryType';
 import EntryList from './EntryList';
 import Spotlight from './Spotlight';
+import EntryListFilters from './EntryListFilters';
 
 const DashboardPage = () => (
   <div>
     <Spotlight></Spotlight>
-    <SelectEntryType></SelectEntryType>
+    <EntryListFilters></EntryListFilters>
     <EntryList></EntryList>
   </div>
 );

@@ -6,10 +6,11 @@
     justify-content: space-between;
     padding: $s-size $m-size;
 }
+
 .list-item {
     border: 1px solid white;
     color: $dark-grey;
-    padding: $s-size;
+    padding: $m-size;
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -22,6 +23,7 @@
         border: 1px solid darken($off-white, 8.5%);
     }
 }
+
 .list-item--message {
     align-items: center;
     justify-content: center;
@@ -31,10 +33,12 @@
         background: none;
     }
 }
+
 .list-item__title {
     margin: 0;
     word-break: break-all;
 }
+
 .list-item__subtitle {
     color: $grey;
     font-size: $font-size-small;
@@ -42,6 +46,7 @@
     font-size: 12px;
     margin-top: 15px;
 }
+
 .list-item__data {
     margin: $s-size 0 0 0;
     @media (min-width: $desktop-breakpoint) {
@@ -49,45 +54,51 @@
         padding-left: $s-size;
     }
 }
+
 .list-body {
     margin-bottom: $m-size;
     @media (min-width: $desktop-breakpoint) {
         margin-bottom: $l-size;
     }
 }
+
 .list-grid {
     display: grid;
     grid: repeat(4, 25%) / repeat(3, 33.3%);
-    grid-gap: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     @media (max-width: $l-devices) {
-        grid: repeat(6, 16.66%) / repeat(2, 50%);
-    }
-    @media (max-width: $s-devices) {
         grid: repeat(12, 8.33%) / 100%;
     }
     *:hover {
         background: darken($off-white, 3%);
     }
-    .onHoverMedia {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-            max-width: 275px;
-            max-height: 300px;
-            object-fit: cover;
-        }
-        max-width: 492px;
+}
+
+.list-grid > .onHoverMedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        max-width: 325px;
+        max-height: 300px;
+        object-fit: cover;
     }
-    .onHoverText {
-        word-wrap: break-word;
-        padding: 20px;
-        p {
-            font-size: 12px;
-            font-family: sans-serif;
-            line-height: 1.6;
-        }
-        max-width: 492px;
+    // max-width: 492px;
+    @media (max-width: $l-devices) {
+       margin: 0 auto;
+    }
+}
+
+.list-grid > .onHoverText {
+    word-wrap: break-word;
+    padding: 20px;
+    p {
+        font-size: 12px;
+        font-family: sans-serif;
+        line-height: 1.6;
+    }
+    max-width: 492px;
+    @media (max-width: $l-devices) {
+        margin: 0 auto;
     }
 }

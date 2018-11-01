@@ -2,16 +2,37 @@
     display: flex;
     flex-direction: column;
     margin-bottom: $m-size;
-    @media (min-width: $desktop-breakpoint) {
+    background: darken($off-white, 3%);
+    border: 1px solid darkgray;
+    justify-content: space-around;
+    @media (min-width: $xl-devices) {
         flex-direction: row;
         margin-bottom: $l-size;
     }
+    @media (max-width: $xl-devices) {
+        padding-bottom: 30px;
+    } 
 }
 
 .input-group__item {
-    margin-bottom: $s-size;
+    align-self: center;
+    @media (min-width: $xl-devices) {
+        margin-right: $l-size;
+    }
+    @media (max-width: $xl-devices) {
+        &:nth-child(4) {
+            order: -1;
+            .input-group__header {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.input-group__header {
+    font-weight: bold;
+    align-self: center;
     @media (min-width: $desktop-breakpoint) {
-        margin-right: $s-size;
-        margin: 0 $s-size;
+        margin: 0 $m-size;
     }
 }

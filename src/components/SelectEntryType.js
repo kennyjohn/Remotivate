@@ -28,14 +28,17 @@ export class SelectEntryType extends React.Component {
             // console.log(this.state.buttonClicked);
         });
     }
+    componentWillMount() {
+        // https://github.com/reactjs/react-modal/issues/133
+        ReactModal.setAppElement('body');
+    }
     render() {
         return (
-        <div className="content-container content-container--stretch">
             <div className="button-container">
                 <button name="clicked" value="text" className="button" onClick={this.toggleModal}>Add Text</button>
                 <button name="clicked" value="video" className="button" onClick={this.toggleModal}>Add Video</button>
                 <button name="clicked" value="image" className="button" onClick={this.toggleModal}>Add Image</button>
-                <ReactModal isOpen={this.state.isActive} onRequestClose={this.toggleModal}
+                <ReactModal isOpen={this.state.isActive} onRequestClose={this.toggleModal} 
                     contentLabel="Submit Entry Modal">
                     <div>
                         <EntryForm 
@@ -45,7 +48,6 @@ export class SelectEntryType extends React.Component {
                     </div>
                 </ReactModal>
             </div>
-        </div>
         );
     }
 }
