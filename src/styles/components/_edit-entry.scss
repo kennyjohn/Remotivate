@@ -1,0 +1,27 @@
+.edit-entry--preview {
+    color: $dark-grey;
+    padding: $m-size;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-entry {
+    img {
+        max-width: 325px;
+        max-height: 300px;
+        object-fit: cover;
+    }
+}
+
+.edit-entry--preview > p:first-child {
+    padding: 20px;
+    font-size: 12px;
+    font-family: sans-serif;
+    line-height: 1.6;
+    background: $off-white;
+    max-width: 492px;
+    color: black;
+    border: 1px solid darken($off-white, 9%);
+}
