@@ -17,13 +17,6 @@ export class EntryListFilters extends React.Component {
     onFocusChange = (calendarFocused) => {
         this.setState(() => ({calendarFocused}));
     };
-    /* onSortClick = (e) => {
-        // https://stackoverflow.com/questions/40359800/how-to-toggle-boolean-state-of-react-component
-        this.setState((prevState) => ({sortByDateSelected: !prevState.sortByDateSelected}));
-        if(this.state.sortByDateSelected) {
-            this.props.sortByDate();
-        }
-    }*/
     onFilterClick = (e) => {
         const value = e.target.value;
         if(this.state.selectedFilter === value) {

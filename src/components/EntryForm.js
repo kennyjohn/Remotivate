@@ -1,5 +1,3 @@
-// How does this inspire you towards fulfilling your purpose?
-// if edit entry, change button to Edit Entry vs Add Entry
 import React from 'react';
 import moment from 'moment';
 

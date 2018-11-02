@@ -17,7 +17,6 @@ export class SelectEntryType extends React.Component {
             });
         }
         this.props.startAddEntry(entry);
-        // window.location.reload();
     };
     toggleModal = (event) => {
         this.setState({

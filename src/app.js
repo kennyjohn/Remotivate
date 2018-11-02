@@ -32,7 +32,6 @@ const renderApp = () => {
 ReactDOM.render(<LoadingPage></LoadingPage>, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
-  // when the user goes from authenticated to unauthenticated or vice versa, this callback is called
   if(user) {
     store.dispatch(login(user.uid));
     store.dispatch(startSetEntries()).then(

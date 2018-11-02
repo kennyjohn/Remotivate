@@ -8,18 +8,6 @@ export class Spotlight extends React.Component {
             toggle: false
         }
     }
-    testing = (e) => {
-        let element = document.querySelector(".page-header").style;
-        if(this.state.toggle) {
-            element.paddingBottom = "200px";
-        } else {
-            element.paddingBottom = "32px";
-        }
-        this.setState((prevState) => ({
-            toggle: !prevState.toggle
-        }));
-        // use e.target and button__toggle
-    }
     render() { 
         return (
             <div className="page-header">

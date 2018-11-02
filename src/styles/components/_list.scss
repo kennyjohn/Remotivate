@@ -69,10 +69,10 @@
 
 .list-grid {
     display: grid;
-    grid: repeat(4, 25%) / repeat(3, 33.3%);
+    grid: repeat(4, 1fr) / repeat(3, 1fr);
     margin-bottom: 30px;
     @media (max-width: $l-devices) {
-        grid: repeat(12, 8.33%) / 100%;
+        grid: repeat(12, 1fr) / 1fr;
     }
     *:hover {
         background: darken($off-white, 3%);
