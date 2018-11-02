@@ -15,6 +15,7 @@
 
 .page-header__title {
     margin: 0;
+    margin-bottom: 7px;
     span {
         font-weight: bold;
     }
@@ -38,6 +39,19 @@
     @media (max-width: $m-devices) {
         display: none;
     }
+}
+
+.page-header--responsive {
+    color: black;
+    text-align: center;
+    margin-bottom: 0;
+    @media (min-width: $m-devices + 1px) {
+        display: none;
+    }
+}
+
+.page-header--margin {
+    margin-bottom: 150px;
 }
 
 .page-header__title, .page-header__caption {

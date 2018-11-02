@@ -8,7 +8,7 @@ const EntryList = (props) => (
          {
             props.entries.length === 0 ? (
             <div className="list-item list-item--message">
-                <span>No entries at the moment</span>
+                <span>No entries at the moment!</span>
                 </div>
             ) : ( 
                 props.entries.map((entry, index) => {
