@@ -1,0 +1,38 @@
+.faq__header {
+    margin-top: $faq-container;
+}
+
+.faq__entries {
+    margin-top: 30px;
+}
+
+.faq__entries p {
+    margin: 0;
+    padding: 20px 25px;
+}
+
+//nth-child is 1th-index, not 0. 
+.faq__entries p:nth-child(2n) {
+    background: darken($off-white, 5%);
+}
+
+.faq__entries p:nth-child(2n+1) {
+    border: 1px solid lightgray;
+    font-weight: bold;
+}
+
+.faq__entries p:first-child {
+    border-top-left-radius: $faq-rounded-edges;
+    border-top-right-radius: $faq-rounded-edges;
+}
+
+.faq__entries p:last-child {
+    border-bottom-left-radius: $faq-rounded-edges;
+    border-bottom-right-radius: $faq-rounded-edges;
+}
+
+.faq--bottom-margin {
+    margin-bottom: $faq-container;
+    color: black;
+    font-weight: 300;
+}

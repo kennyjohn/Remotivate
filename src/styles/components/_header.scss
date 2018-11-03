@@ -5,10 +5,11 @@
 .header__content {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .header__title {
+    margin-right: auto;
     color: white;
     text-decoration: none;
     h1 {
