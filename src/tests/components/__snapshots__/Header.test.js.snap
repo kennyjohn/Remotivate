@@ -19,6 +19,15 @@ exports[`should render Header 1`] = `
           Remotivate
         </h1>
       </Link>
+      <Link
+        className="button button--logout"
+        replace={false}
+        to="/faqs"
+      >
+        <span>
+          FAQs
+        </span>
+      </Link>
       <button
         className="button button--logout"
         onClick={[Function]}

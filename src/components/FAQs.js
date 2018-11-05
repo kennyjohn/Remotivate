@@ -2,7 +2,7 @@ import React from 'react';
 
 const FAQs = () => (
     <div className="content-container faq--bottom-margin">
-        <h2 className="faq__header">Frequently Asked Questions</h2>    
+        <h2 className="faq__header">Frequently Asked Questions</h2> 
         <p>On this page, you will find questions that are commonly asked about Remotivate, accompanied by their answers. If you do not find the question or answer that you are looking for, please come in contact with me to let me know about an unknown issue.</p>
         <div className="faq__entries">
             <p>Why are my images not showing up properly?</p>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setFilter, setStartDate, setEndDate } from '../actions/filters';
-import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 import SelectEntryType from './SelectEntryType';
+import { DateRangePicker } from 'react-dates';
 
 export class EntryListFilters extends React.Component {
     state = {
