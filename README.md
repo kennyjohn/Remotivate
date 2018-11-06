@@ -15,12 +15,7 @@ Motivation fluctuates, so I wanted to build this application to facilitate a boo
 > usability of the application. I am still trying to figure out how to solve these issues as I learn more.
 > If you catch an issue that is not listed here or have a suggestion, please feel free to let me know at
 > **yaykennyjohn@gmail.com**. Thank you!
-- Sometimes refreshing the page generates an error message on the page header. The reason I did this was because had I not,
-the information I wanted to show would be blank.
-- Failed to load resource: **net::ERR_BLOCKED_BY_CLIENT** in the console: I have read on some articles that this is caused by Adblock
-when there are video entries on the dashboard. From what I understand, the Adblock is intercepting (and blocking) the ads 
-that are supposed to be shown in the videos, so an error is thrown to denote this action. 
-
+- Failed to load resource: **net::ERR_BLOCKED_BY_CLIENT** in the console: I have read on some articles that this is caused by Adblock when there are video entries on the dashboard. From what I understand, the Adblock is intercepting (and blocking) the ads that are supposed to be shown in the videos, so an error is thrown to denote this action. 
 
 ### Future Plans
 - Only allow 9-12 entries per page to reduce page load time.
