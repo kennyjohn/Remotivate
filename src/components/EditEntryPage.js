@@ -14,11 +14,6 @@ export class EditEntryPage extends React.Component {
         this.props.startRemoveEntry({id: this.props.entry.id});
         this.props.history.push('/');
     }
-    onBeforeUnload =  () => {
-        return window.unbeforeunload = () => {
-            window.scrollTo(0, 0);
-        }
-    }
     componentDidMount() {
         window.scrollTo(0, 0)
     }
@@ -35,7 +30,7 @@ export class EditEntryPage extends React.Component {
               </div>
             </div>
 
-           <div className={text ? "edit-entry--preview" : video || image ? "edit-entry--preview media-entry" : ""}>
+           <div className={text ? "edit-entry__preview" : video || image ? "edit-entry__preview media-entry" : ""}>
                 {   image ? <img src={image.replace("http:", "https:")}></img> :
                     text ? <p>{text}</p> :
                     video ? <iframe width="325" height="275" src={video.replace("watch?v=", "embed/")} frameBorder="0" allow="encrypted-media" allowFullScreen></iframe> :

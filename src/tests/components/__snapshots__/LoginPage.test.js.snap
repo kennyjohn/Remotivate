@@ -12,6 +12,11 @@ exports[`should render LoginPage 1`] = `
     >
       Remotivate
     </h1>
+    <img
+      alt="Simpsons Header Photo"
+      className="header__photo--login"
+      src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Simpsons6x13.jpg/235px-Simpsons6x13.jpg"
+    />
     <p>
        Motivation comes and goes. Unfortunately, it happens more often than we'd like. With Remotivate, you can quickly remind yourself of the things that drive you every day. Come on in, and stay inspired!
     </p>

@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EditEntryPage component with the appropriate entry 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Edit Entry
+      </h1>
+    </div>
+  </div>
+  <div
+    className="edit-entry--preview"
+  >
+    <p>
+      testing
+    </p>
+    <p
+      className="list-item__subtitle"
+    >
+      December 31st, 1969
+    </p>
+  </div>
+  <div
+    className="content-container"
+  >
+    <EntryForm
+      entry={
+        Object {
+          "author": "Kobe Bryant",
+          "createdAt": 0,
+          "id": "hqkwehk123",
+          "image": "",
+          "purpose": "",
+          "text": "testing",
+          "video": "",
+        }
+      }
+      onSubmit={[Function]}
+    />
+    <button
+      className="button button--remove button__extend"
+      onClick={[Function]}
+    >
+      Remove Entry
+    </button>
+  </div>
+</div>
+`;
+
+exports[`should render EditEntryPage component with the appropriate entry 2`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Edit Entry
+      </h1>
+    </div>
+  </div>
+  <div
+    className="edit-entry--preview media-entry"
+  >
+    <img
+      src="https://wwww.pictureimage.com"
+    />
+    <p
+      className="list-item__subtitle"
+    >
+      January 5th, 1970
+    </p>
+  </div>
+  <div
+    className="content-container"
+  >
+    <EntryForm
+      entry={
+        Object {
+          "author": "David Goggins",
+          "createdAt": 432000000,
+          "id": "69312332223",
+          "image": "http://wwww.pictureimage.com",
+          "purpose": "This means a lot to me because...",
+          "text": "",
+          "video": "",
+        }
+      }
+      onSubmit={[Function]}
+    />
+    <button
+      className="button button--remove button__extend"
+      onClick={[Function]}
+    >
+      Remove Entry
+    </button>
+  </div>
+</div>
+`;
+
+exports[`should render EditEntryPage component with the appropriate entry 3`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Edit Entry
+      </h1>
+    </div>
+  </div>
+  <div
+    className="edit-entry--preview media-entry"
+  >
+    <iframe
+      allow="encrypted-media"
+      allowFullScreen={true}
+      frameBorder="0"
+      height="275"
+      src="http://www.youtube.com"
+      width="325"
+    />
+    <p
+      className="list-item__subtitle"
+    >
+      December 26th, 1969
+    </p>
+  </div>
+  <div
+    className="content-container"
+  >
+    <EntryForm
+      entry={
+        Object {
+          "author": "Jay Shetty",
+          "createdAt": -432000000,
+          "id": "wtfc00l",
+          "image": "",
+          "purpose": "",
+          "text": "",
+          "video": "http://www.youtube.com",
+        }
+      }
+      onSubmit={[Function]}
+    />
+    <button
+      className="button button--remove button__extend"
+      onClick={[Function]}
+    >
+      Remove Entry
+    </button>
+  </div>
+</div>
+`;

@@ -13,7 +13,9 @@
 
 //nth-child is 1th-index, not 0. 
 .faq__entries p:nth-child(2n) {
-    background: darken($off-white, 5%);
+    background: darken($off-white, 3%);
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
 }
 
 .faq__entries p:nth-child(2n+1) {
@@ -29,6 +31,7 @@
 .faq__entries p:last-child {
     border-bottom-left-radius: $faq-rounded-edges;
     border-bottom-right-radius: $faq-rounded-edges;
+    border-bottom: 1px solid lightgray;
 }
 
 .faq--bottom-margin {

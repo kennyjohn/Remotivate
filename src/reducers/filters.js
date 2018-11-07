@@ -3,7 +3,7 @@ import moment from 'moment';
 const filtersReducerDefaultState = {
     value: null,
     startDate: moment().startOf('year'),
-    endDate: moment().endOf('month'),
+    endDate: moment().endOf('month')
 }
 
 export default (state = filtersReducerDefaultState, action) => {

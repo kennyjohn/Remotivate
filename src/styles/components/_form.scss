@@ -5,10 +5,12 @@
         margin-bottom: $m-size;
     }
 }
+
 .form__entry-header {
-    margin: 0;
-    margin-bottom: 15px;
+    margin: 10px auto 20px auto;
+    color: black;
 } 
+
 .form__error {
     margin: 0 0 $m-size 0;
     font-style: italic;

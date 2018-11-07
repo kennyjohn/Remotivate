@@ -12,7 +12,7 @@ export default class EntryForm extends React.Component {
             purpose: props.entry ? props.entry.purpose : '',
             createdAt: props.entry ? moment(props.entry.createdAt) : moment(),
             error: ''
-        }
+        };
     }   
     onTextChange = (e) => {
         const text = e.target.value;
@@ -48,7 +48,8 @@ export default class EntryForm extends React.Component {
         else if(!this.state.image && clicked === 'image') {
             this.setState(() => ({ error: 'Please provide a URL for your image entry.' }));
             return;
-        } else {
+        }
+        else {
             this.setState(() => ({ error: '' }));
             this.props.onSubmit({
                 text: this.state.text,

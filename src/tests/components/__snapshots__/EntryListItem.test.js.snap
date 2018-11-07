@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EntryListItem component 1`] = `
+<Link
+  className="list-item onHoverMedia"
+  replace={false}
+  to="/edit/69312332223"
+>
+  <img
+    src="https://wwww.pictureimage.com"
+  />
+  <p
+    className="list-item__subtitle"
+  >
+    January 5th, 1970
+  </p>
+</Link>
+`;

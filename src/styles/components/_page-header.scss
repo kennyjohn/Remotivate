@@ -3,6 +3,7 @@
     padding: $l-size 0;
     border-bottom: 1px solid #d9d9d9;
     margin-bottom: $l-size;
+    color: black;
 }
 
 .page-header__img {
@@ -11,6 +12,7 @@
     object-fit: cover;
     grid-column: 1 / 2;
     margin: 0 auto;
+    border: 1px solid lighten(black, 65%);
 }
 
 .page-header__title {
@@ -24,18 +26,12 @@
     }
 }
 
-.page-header__title--error {
-    margin: 0;
-    margin-top: 25px;
-    font-size: 12px;
-}
-
 .page-header__caption {
     font-size: 12px;
     margin: 0 auto;
 }
 
-.page-header__title--error, .page-header__caption {
+.page-header__caption {
     @media (max-width: $m-devices) {
         display: none;
     }

@@ -10,7 +10,6 @@ export class SelectEntryType extends React.Component {
         buttonClicked: null
     }
     onSubmit = (entry) => {
-        console.log(entry);
         if(this.state.isActive) {
             this.setState({
                 isActive: false

@@ -1,4 +1,4 @@
-.edit-entry--preview {
+.edit-entry__preview {
     color: $dark-grey;
     padding: $m-size;
     display: flex;
@@ -15,7 +15,7 @@
     }
 }
 
-.edit-entry--preview > p:first-child {
+.edit-entry__preview > p:first-child {
     padding: 20px;
     font-size: 12px;
     font-family: sans-serif;

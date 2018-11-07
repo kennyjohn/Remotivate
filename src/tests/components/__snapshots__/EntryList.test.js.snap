@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EntryList component 1`] = `
+<div
+  className="content-container content-container--stretch list-grid"
+>
+  <EntryListItem
+    author="Kobe Bryant"
+    createdAt={0}
+    id="hqkwehk123"
+    image=""
+    key="0"
+    purpose=""
+    text="testing"
+    video=""
+  />
+  <EntryListItem
+    author="David Goggins"
+    createdAt={432000000}
+    id="69312332223"
+    image="http://wwww.pictureimage.com"
+    key="1"
+    purpose="This means a lot to me because..."
+    text=""
+    video=""
+  />
+  <EntryListItem
+    author="Jay Shetty"
+    createdAt={-432000000}
+    id="wtfc00l"
+    image=""
+    key="2"
+    purpose=""
+    text=""
+    video="http://www.youtube.com"
+  />
+</div>
+`;
+
+exports[`should render EntryList with empty message 1`] = `
+<div
+  className="content-container content-container--stretch list-grid"
+>
+  <div
+    className="list-item list-item--message"
+  >
+    <span>
+      No entries at the moment!
+    </span>
+  </div>
+</div>
+`;

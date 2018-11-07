@@ -4,7 +4,7 @@ import moment from 'moment';
 
 // https://stackoverflow.com/questions/25661182/embed-youtube-video-refused-to-display-in-a-frame-because-it-set-x-frame-opti
 
-const EntryListItem = ({ id, text, author, video, image, purpose, createdAt }) => (
+const EntryListItem = ({ id, text, video, image, createdAt }) => (
     <Link className={text ? "list-item onHoverText" : video || image ? "list-item onHoverMedia" : ""} to={`/edit/${id}`}>
     { image ? <img src={image.replace("http:", "https:")}></img> :
         text ? <p>{text}</p> :

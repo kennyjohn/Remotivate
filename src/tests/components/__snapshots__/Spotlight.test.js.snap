@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Spotlight component 1`] = `
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="page-header__bio"
+    >
+      <img
+        alt="The Black Mamba"
+        className="page-header__img"
+        src="http://www.testingsomerandomurl.com"
+      />
+      <h1
+        className="page-header__title"
+      >
+        The Black Mamba
+      </h1>
+      <p
+        className="page-header__caption"
+      >
+        Kobe Bryant is cool
+      </p>
+    </div>
+    <p
+      className="page-header--responsive"
+    >
+      This is an individual that has personally inspired me, please check them out!
+    </p>
+  </div>
+</div>
+`;

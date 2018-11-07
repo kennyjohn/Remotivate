@@ -10,6 +10,7 @@
         margin-bottom: $l-size;
     }
     @media (max-width: $xl-devices) {
+        padding-top: 14px;
         padding-bottom: 30px;
     } 
 }
@@ -30,6 +31,7 @@
 }
 
 .input-group__header {
+    color: black;
     font-weight: bold;
     align-self: center;
     @media (min-width: $desktop-breakpoint) {

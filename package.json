@@ -15,7 +15,6 @@
   "dependencies": {
     "ajv": "^6.5.4",
     "babel-cli": "6.24.1",
-    "babel-core": "6.25.0",
     "babel-loader": "7.1.1",
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-polyfill": "6.26.0",
@@ -56,6 +55,7 @@
     "enzyme": "3.0.0",
     "enzyme-adapter-react-16": "1.0.0",
     "enzyme-to-json": "3.0.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "20.0.4",
     "react-test-renderer": "16.0.0",
     "webpack-dev-server": "2.5.1"

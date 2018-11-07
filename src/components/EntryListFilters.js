@@ -27,7 +27,7 @@ export class EntryListFilters extends React.Component {
         this.setState({selectedFilter: value});
     };
     render() { 
-        let selectedFilter = this.state.selectedFilter;
+        const selectedFilter = this.state.selectedFilter;
         return (
             <div className="content-container content-container--stretch">
                 <div className="input-group">

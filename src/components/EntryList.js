@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import EntryListItem from './EntryListItem';
 import selectEntries from '../selectors/entries';
 
-const EntryList = (props) => (
+export const EntryList = (props) => (
     <div className="content-container content-container--stretch list-grid">
          {
             props.entries.length === 0 ? (
