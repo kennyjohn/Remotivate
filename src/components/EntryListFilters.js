@@ -19,13 +19,19 @@ export class EntryListFilters extends React.Component {
     };
     onFilterClick = (e) => {
         const value = e.target.value;
+        /* unsets filter when button toggled  */
         if(this.state.selectedFilter === value) {
             this.props.setFilter(null);
             return this.setState({selectedFilter: null});
         }
+        /* sets filter */
         this.props.setFilter(value);
         this.setState({selectedFilter: value});
     };
+    componentDidMount() {
+        /* selectedFilter should always be null upon component render */
+        this.props.setFilter(this.state.selectedFilter);
+    }
     render() { 
         const selectedFilter = this.state.selectedFilter;
         return (

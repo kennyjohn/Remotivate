@@ -11,9 +11,12 @@ export default class EntryForm extends React.Component {
             image: props.entry ? props.entry.image : '',
             purpose: props.entry ? props.entry.purpose : '',
             createdAt: props.entry ? moment(props.entry.createdAt) : moment(),
+            disabledTextFlag: true, 
+            disabledImageFlag: true, 
+            disabledVideoFlag: true,
             error: ''
         };
-    }   
+    }  
     onTextChange = (e) => {
         const text = e.target.value;
         this.setState(() => ({ text }));
@@ -61,25 +64,45 @@ export default class EntryForm extends React.Component {
             });  
         }
     };
+    componentDidMount() {
+        if(this.state.text) {
+            this.setState(() => ({
+                disabledTextFlag: false,
+                disabledImageFlag: true,
+                disabledVideoFlag: true
+            }));
+        } else if(this.state.image) {
+            this.setState(() => ({
+                disabledTextFlag: true,
+                disabledImageFlag: false,
+                disabledVideoFlag: true
+            }));
+        } else {
+            this.setState(() => ({
+                disabledTextFlag: true,
+                disabledImageFlag: true,
+                disabledVideoFlag: false
+            }));
+        }
+    }
     render() {
         return (
             <div>
-                {(!this.state.text && !this.state.video && !this.state.image)
-                && <h1 className="form__entry-header">Entry Form</h1>}
+                {this.props.buttonClicked && <h1 className="form__entry-header">Entry Form</h1>}
                 <form className="form" onSubmit={this.onSubmit}>
                     {this.state.error && <p className="form__error">{this.state.error}</p>}
                     <textarea
                     /* disabled attribute accepts single attribute boolean (e.g. true, false);
                     can't refer to a function to return boolean result */
                     maxLength="1000"
-                    disabled={!!this.state.text || this.props.buttonClicked === 'text' ? false : true}
+                    disabled={!this.props.buttonClicked ? this.state.disabledTextFlag : this.props.buttonClicked !== "text"}
                     placeholder="Text"
                     onChange={this.onTextChange}
                     value={this.state.text} 
                     className="textarea"
                     >
                     </textarea>
-                    <input
+                    <input 
                     maxLength="70"
                     type="text"
                     placeholder="Author (Optional)"
@@ -88,7 +111,7 @@ export default class EntryForm extends React.Component {
                     className="text-input"
                     />
                     <input
-                    disabled={!!this.state.video || this.props.buttonClicked === 'video' ? false : true}
+                    disabled={!this.props.buttonClicked ? this.state.disabledVideoFlag : this.props.buttonClicked !== "video"}
                     type="text"
                     placeholder="Youtube Video URL"
                     onChange={this.onVideoURLChange}
@@ -96,7 +119,7 @@ export default class EntryForm extends React.Component {
                     className="text-input"
                     />
                     <input
-                    disabled={!!this.state.image || this.props.buttonClicked === 'image' ? false : true}
+                    disabled={!this.props.buttonClicked ? this.state.disabledImageFlag : this.props.buttonClicked !== "image"}
                     type="text"
                     placeholder="Image URL"
                     onChange={this.onImageURLChange}
@@ -104,9 +127,9 @@ export default class EntryForm extends React.Component {
                     className="text-input"
                     />
                     <textarea
-                    placeholder={`Why is this ${this.state.text || this.props.buttonClicked === 'text' ? 'text' : 
-                    this.state.image || this.props.buttonClicked === 'image' ? 'image' :
-                    this.state.video || this.props.buttonClicked === 'video' ? 'video' :
+                    placeholder={`Why is this ${!this.state.disabledTextFlag || this.props.buttonClicked === 'text' ? 'text' : 
+                    !this.state.disabledImageFlag || this.props.buttonClicked === 'image' ? 'image' :
+                    !this.state.disabledVideoFlag || this.props.buttonClicked === 'video' ? 'video' :
                     ''} important to you?`}
                     onChange={this.onPurposeChange}
                     value={this.state.purpose}

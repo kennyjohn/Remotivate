@@ -7,7 +7,7 @@ import { startEditEntry, startRemoveEntry } from '../actions/entries';
 export class EditEntryPage extends React.Component {
     onSubmit = (entry) => {
         this.props.startEditEntry(this.props.entry.id, entry);
-        window.location.reload(); /*Temporary fix*/
+        window.location.reload(); // Temporary fix
         this.props.history.push('/');
     }
     onRemove = () => {
@@ -18,10 +18,10 @@ export class EditEntryPage extends React.Component {
         window.scrollTo(0, 0)
     }
     render() {
-        let text = this.props.entry.text;
-        let video = this.props.entry.video;
-        let image = this.props.entry.image;
-        let createdAt = this.props.entry.createdAt;
+        const text = this.props.entry.text;
+        const video = this.props.entry.video;
+        const image = this.props.entry.image;
+        const createdAt = this.props.entry.createdAt;
         return (
           <div>
             <div className="page-header">
