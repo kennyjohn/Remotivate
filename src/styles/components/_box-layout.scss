@@ -1,23 +1,22 @@
 .box-layout {
-    background: url('/images/la-scenery-min.png');
-    background-size: cover;
+    background: #5789B8;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
+    color: black;
 }
 
 .box-layout__box {
     background: fade-out(white, .15);
-    border-radius: 3px;
+    border-radius: 0.3rem;
     text-align: center;
-    width: 25rem;
-    padding: $l-size $m-size;
+    width: 35rem;
+    padding: $l-size;
 }
 
 .box-layout__title {
     margin: 0 0 $m-size 0;
-    line-height: 1;
     color: black;
 }

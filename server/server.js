@@ -12,6 +12,7 @@ app.get("*", (req, res) => {
 
 // If the variable exists, that means we are on Heroku and we do want to use the port value that it assigns.
 // If it doesn't, we can default to something like 3000.
+
 app.listen(process.env.PORT || 3000, () => {
     console.log("Server is running");
 });

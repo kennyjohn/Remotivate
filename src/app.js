@@ -11,8 +11,8 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import LoadingPage from './components/LoadingPage';
 
-// If you are using react, wrap your root component with PersistGate.
-// This delays the rendering of your app's UI until your persisted state has been retrieved and saved to redux. 
+// If you are using React, wrap your root component with PersistGate.
+// This delays the rendering of your app's UI until your persisted state has been retrieved and saved to Redux. 
 // NOTE the PersistGate loading prop can be null, or any react instance, e.g. loading={<Loading />}
 
 const store = configureStore();
